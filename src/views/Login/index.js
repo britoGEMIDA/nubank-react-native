@@ -11,20 +11,31 @@ export default function Login({navigation, route}) {
             {/* Componente de login */}
             <View style={styles.cardLogin}>
                 {/* Titulo */}
-                <Text style={styles.title}>bem vindo(a) ao NooBank!</Text>
+                <Text style={styles.title}>Bem vindo(a) ao NTPET!</Text>
                 {/* Campo para entrada do nome */}
-                <Text style={styles.label}>Seu nome:</Text>
+                <Text style={styles.label}>Digite seu nome:</Text>
                 {/* Campo para entrada do usuario */}
-                <TextInput style={styles.input} placeholder={'Digite seu nome aqui..'} onChangeText={setName}></TextInput>
+                <TextInput style={styles.input} placeholder={'Digite seu nome aqui...'} onChangeText={setName}></TextInput>
+                <Text style={styles.label}>Digite seu CPF:</Text>
+                {/* Campo para entrada do usuario */}
+                <TextInput style={styles.input} placeholder={'Digite seu CPF...'} onChangeText={setName}></TextInput>
+                {/* Botão para o login */}
+                <Text style={styles.label}>Digite seu telefone:</Text>
+                {/* Campo para entrada do usuario */}
+                <TextInput style={styles.input} placeholder={'Digite seu telefone...'} onChangeText={setName}></TextInput>
+                {/* Botão para o login */}
+                <Text style={styles.label}>Digite seu e-mail:</Text>
+                {/* Campo para entrada do usuario */}
+                <TextInput style={styles.input} placeholder={'Digite seu e-mail...'} onChangeText={setName}></TextInput>
                 {/* Botão para o login */}
                 <TouchableOpacity>
-                    <Text style={styles.buttonLogin} onPress={() => {navigation.navigate("Home", {name:name})}}>LOGAR</Text>
+                    <Text style={styles.buttonLogin} onPress={() => {navigation.navigate("Home", {name:name})}}>LOGIN</Text>
                 </TouchableOpacity>
             </View>
             {/* Link para o Github*/}
             <TouchableOpacity onPress={() => {Linking.openURL('https://github.com/SesiSenai1DE');}}>
                 <Text style={styles.link}>
-                    Developed by 2DE
+                    Voltar
                 </Text>
             </TouchableOpacity>
         </View>
@@ -35,7 +46,7 @@ export default function Login({navigation, route}) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#8000ff',
+        backgroundColor: '#699bf7',
         flexDirection: 'column',
         justifyContent: 'center',
         tintColor: 'red',
@@ -71,8 +82,8 @@ const styles = StyleSheet.create({
         borderRadius: 4,
     },
     buttonLogin: {
-        backgroundColor: '#8000ff',
-        fontSize: 20,
+        backgroundColor: '#699bf7',
+        fontSize: 15,
         textAlign: 'center',
         alignSelf: 'flex-end',
         paddingHorizontal: 15,
